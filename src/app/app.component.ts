@@ -3,6 +3,7 @@ import {AgmCoreModule} from '@agm/core';
 
 import {Service} from './service';
 import {Busqueda} from './Busqueda';
+import {Actualizacion} from './Actualizacion';
 /** 
  * The app component. This component is the base of the BookStore
  */
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
 
     busqueda: Busqueda;
     busquedas: Busqueda[];
+    actualizaciones: Actualizacion[];
 
     showPagina0: boolean;
     showPagina1: boolean;
@@ -45,16 +47,19 @@ export class AppComponent implements OnInit {
                 this.showPagina2 = true;
                 this.showPagina3 = false;
                 this.busquedas = busquedas;
-                this.showPagina1C();
             });
 
     }
 
     showPagina3C(): void {
-        this.showPagina0 = false;
-        this.showPagina1 = false;
-        this.showPagina2 = false;
-        this.showPagina3 = true;
+        this.service.getActualizaciones().subscribe(actualizaciones => {
+            this.showPagina0 = false;
+            this.showPagina1 = false;
+            this.showPagina2 = false;
+            this.showPagina3 = true;
+            this.actualizaciones = actualizaciones;
+        });
+
     }
     showPagina0C(): void {
         this.showPagina0 = true;

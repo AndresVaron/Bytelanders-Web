@@ -88,9 +88,9 @@
                 <div class="col-md-6">
                     <agm-map [zoom]="6" [latitude]="4" [longitude]="-74">
                         <div *ngFor = "let busq of busquedas">
-                            <agm-marker *ngIf="!busqueda.actualizado" [latitude]="busqueda.latitud" [longitude]="busqueda.longitud" [label]="'*'">
+                            <agm-marker *ngIf="!busq.actualizado" [latitude]="busq.latitud" [longitude]="busq.longitud" [label]="'*'">
                             </agm-marker>
-                            <agm-marker *ngIf="busqueda.actualizado" [latitude]="busqueda.latitud" [longitude]="busqueda.longitud">
+                            <agm-marker *ngIf="busq.actualizado" [latitude]="busq.latitud" [longitude]="busq.longitud">
                             </agm-marker>
                         </div>
                     </agm-map>
@@ -104,7 +104,10 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <agm-map [zoom]="6" [latitude]="4" [longitude]="-74" >
-
+                        <div *ngFor = "let act of actualizaciones">
+                            <agm-marker [latitude]="act.latitud" [longitude]="act.longitud">
+                            </agm-marker>
+                        </div>
                     </agm-map>
                 </div>
                 <div class="col-md-3"></div>
