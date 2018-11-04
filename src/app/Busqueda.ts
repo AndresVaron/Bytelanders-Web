@@ -1,3 +1,4 @@
+
 export class Busqueda {
     direccion: string;
 
@@ -6,5 +7,6 @@ export class Busqueda {
     latitud: string;
 
     tipoPredio: string;
-}
 
+    actualizado: boolean;
+}

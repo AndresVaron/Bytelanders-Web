@@ -1,3 +1,7 @@
- agm-map {
-      height: 300px;
-    }
+agm-map {
+    height: 50vh;
+}
+
+nav-item{
+    font-size: 50px;
+}

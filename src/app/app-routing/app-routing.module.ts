@@ -1,16 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {BusquedaParamsComponents} from '../busqueda/busqueda-params/busqueda-params.component';
+import {AppComponent} from '../app.component';
 
 const routes: Routes = [
     {
-        path: 'busqueda',
-        component: BusquedaParamsComponents
-    },
-    {
         path: 'home',
-        component: BusquedaParamsComponents
+        component: AppComponent
     },
     {
         path: '**',
