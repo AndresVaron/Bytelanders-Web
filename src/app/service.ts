@@ -20,7 +20,7 @@ export class Service {
     getDireccion(direccion: string, localidad: string, ciudad: string): Observable<Busqueda> {
         direccion = direccion.replace(" ", "_");
         direccion = direccion.replace("#", "*");
-        return this.http.get<Busqueda>("http://157.253.238.75/bytelanders/api/direccionerrada/" + direccion + "/" + localidad + "/" + ciudad);
+        return this.http.get<Busqueda>("http://157.253.238.75/bytelanders/api/direccionerrada/dir?direccion=" + direccion + "&localidad=" + localidad + "&departamento=" + ciudad);
     }
 
 

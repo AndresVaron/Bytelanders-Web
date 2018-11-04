@@ -82,11 +82,10 @@ export class AppComponent implements OnInit {
     }
 
     submitCalculo() {
-        this.service.getDireccion(this.direccion, this.localidad, this.ciudad)
-            .subscribe(busqueda => {
-                this.busqueda = busqueda;
-                this.showPagina1C();
-            });
+//        this.service.getDireccion(this.direccion, this.localidad, this.ciudad)
+//            .subscribe(busqueda => {
+//                this.showPagina1C();
+//            });
         this.showPagina1C();
     }
 

@@ -37,7 +37,7 @@
                     <div class="row" style="text-align: center">
                         <div class="col-md-1"></div>
                         <div class="col-md-4">
-                            <input class="form-control" [(ngModel)]="direccion" id="direccion" aria-describedby="direccion" placeholder="Ingresar Direccion">
+                            <input class="form-control"  [(ngModel)]="direccion" id="direccion" aria-describedby="direccion" placeholder="Ingresar Direccion">
                         </div>
                         <div class="col-md-3">
                             <input class="form-control" [(ngModel)]="localidad" id="localidad" aria-describedby="localidad" placeholder="Ingresar Localidad">
@@ -63,17 +63,15 @@
         <div *ngIf="showPagina1">
             <div class="row">
                 <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <agm-map [latitude]="busqueda.latitud" [longitude]="busqueda.longitud">
-                        <agm-marker *ngIf="!busqueda.actualizado" [latitude]="busqueda.latitud" [longitude]="busqueda.longitud" [label]="'*'">
-                        </agm-marker>
-                        <agm-marker *ngIf="busqueda.actualizado" [latitude]="busqueda.latitud" [longitude]="busqueda.longitud">
+                <div class="col-md-6" >
+                    <agm-map [latitude]="4.6265265" [longitude]="-74.0707345999999">
+                        <agm-marker [latitude]="4.6265265" [longitude]="-74.0707345999999" [label]="'*'">
                         </agm-marker>
                     </agm-map>
                     <div class="row" >
                         <div class="col-md-3"></div>
                         <div class="col-md-6" style=" text-align: center">
-                            <label>Tipo Predio:</label> <label [ngModel]="busqueda.tipoPredio" ></label>
+                            <label>Tipo Predio:</label> <label >Multifamiliar</label>
                         </div>
                         <div class="col-md-3"></div>
                     </div>
